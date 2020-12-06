@@ -45,19 +45,6 @@ const SIgnIn: React.FC = () => {
         });
 
         await signIn({ email: data.email, password: data.password });
-
-        addToast({
-          type: 'sucess',
-          title: 'Login com sucesso',
-        });
-        addToast({
-          type: 'error',
-          title: 'Login com sucesso',
-        });
-        addToast({
-          type: 'info',
-          title: 'Login com sucesso',
-        });
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
